@@ -42,6 +42,7 @@ public class Phone {
         return Double.compare(weight, phone.weight) == 0 && Objects.equals(number, phone.number) && Objects.equals(model, phone.model);
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(number, model, weight);
@@ -56,7 +57,7 @@ public class Phone {
                 '}';
     }
 
-    public void receiveCall(String name) {
+    public void receiveCall(Person name) {
         System.out.printf("Звонит %s", name);
     }
 }

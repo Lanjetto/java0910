@@ -1,9 +1,15 @@
 package com.nexign.helloJava.examples.model;
 
+import com.nexign.helloJava.examples.Movable;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Person {
+
+
+
+
+public class Person implements Movable{
       protected String name;
       String lastName;
       int age;
@@ -69,6 +75,10 @@ public class Person {
           return cost;
      }
 
+     public void talk() {
+          System.out.println("Talk");
+     }
+
      @Override
      public boolean equals(Object o) {
           if (this == o) return true;
@@ -90,4 +100,11 @@ public class Person {
                   ", age=" + age +
                   ", salary=" + salary;
      }
+
+     @Override
+     public void move() {
+          System.out.println("Идет");
+     }
+
+
 }

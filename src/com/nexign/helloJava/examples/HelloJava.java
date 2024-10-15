@@ -1,13 +1,9 @@
 package com.nexign.helloJava.examples;
 
-import com.nexign.helloJava.examples.model.Person;
-import com.nexign.helloJava.examples.model.Phone;
+import com.nexign.helloJava.examples.model.*;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 /// @author Alex
 
@@ -18,9 +14,34 @@ import static java.util.Arrays.*;
 public class HelloJava {
     public static void main(String[] args) {
 
-        Phone phone0 = new Phone();
+
+        Movable[] movables = {new Car(), new Person(), new Helicopter()};
+        for (Movable movable : movables) {
+            movable.move();
+        }
+
+
+        Point point1 = new Point(2, 4);
+        Point point2 = new Point(2, 4);
+        System.out.println(point2.equals(point1));
+
+
+        Object phone0 = new Phone();
         Phone phone1 = new Phone("123", "1");
         Phone phone2 = new Phone();
+
+
+        Person p1 = new Person() {
+            int value;
+
+            public int getValue() {
+                return value;
+            }
+        };
+
+        phone1.receiveCall(p1);
+
+
 
         HelloJava helloJava = new HelloJava();
         helloJava.arrayTest();

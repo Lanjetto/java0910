@@ -11,6 +11,10 @@ public class Calculator {
         return a + b;
     }
 
+    public static <T extends Number> int sum(T a, T b) {
+        return a.intValue() + b.intValue();
+    }
+
     public static BigDecimal subtractSalary(Person p1, Person p2) {
         BigDecimal salary1 = p1.getSalary();
         BigDecimal salary2 = p2.getSalary();

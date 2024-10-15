@@ -14,10 +14,17 @@ public class Employee extends Person {
         System.out.println("IM WORKIN'");
     }
 
+
+    public void talk() {
+        System.out.println("Talk abut work");
+    }
+
     public static void main(String[] args) {
-        Employee p = new Employee("A", "M", 12, BigDecimal.TEN, "Job");
+        Person p = new Employee("A", "M", 12, BigDecimal.TEN, "Job");
+
+        p.talk();
         String name1 = p.name;
-        p.doJob();
+//        p.doJob();
 
 
     }
